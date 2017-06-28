@@ -1,0 +1,64 @@
+{
+  "name": "mcmakler-backend",
+  "version": "1.0.0",
+  "description": "McMakler backend test",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --ui bdd --reporter spec --colors --compilers js:babel-core/register server/tests --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsan-virani/mcmakler-backend-test.git"
+  },
+  "keywords": [
+    "mcmakler",
+    "backend",
+    "test",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "Ahsan Virani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahsan-virani/mcmakler-backend-test/issues"
+  },
+  "homepage": "https://github.com/ahsan-virani/mcmakler-backend-test#readme",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "express": "^4.15.3",
+    "mocha": "^3.4.2",
+    "mongoose": "^4.10.8",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^1.2.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
+}
