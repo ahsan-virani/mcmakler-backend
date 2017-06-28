@@ -5,7 +5,7 @@ function all(req, res) {
     .then((neos) => {
       res.json(neos);
     })
-    .catch(res.send);
+    .catch(e => res.send(e));
 }
 
 function hazardous(req, res) {
@@ -13,7 +13,7 @@ function hazardous(req, res) {
     .then((resp) => {
       res.json(resp);
     })
-    .catch(res.send);
+    .catch(e => res.send(e));
 }
 
 function fastest(req, res) {
@@ -21,15 +21,15 @@ function fastest(req, res) {
     .then((resp) => {
       res.json(resp);
     })
-    .catch(res.send);
+    .catch(e => res.send(e));
 }
 
 function getBest(filter, neos) {
   try {
+    if (neos === undefined || neos.length === 0)
+      throw ('No NEOs found');
     let neoFilters = {};
     let maxNeosFilter = { filter: '', neos: 0 };
-    console.log('get best');
-    console.log('filter', filter);
     neos.forEach((oneNeo) => {
       let currFilter;
       switch (filter) {
@@ -72,8 +72,9 @@ function bestMonth(req, res) {
         .then((bestM) => {
           res.json(Number(bestM) + 1);
         })
+        .catch(e => res.send(e));
     })
-    .catch(e => res.send);
+    .catch(e => res.send(e));
 }
 
 function bestYear(req, res) {
@@ -83,8 +84,9 @@ function bestYear(req, res) {
         .then((year) => {
           res.json(year);
         })
+        .catch(e => res.send(e));
     })
-    .catch(e => res.send);
+    .catch(e => res.send(e));
 }
 
 export default { all, hazardous, fastest, bestYear, bestMonth }
