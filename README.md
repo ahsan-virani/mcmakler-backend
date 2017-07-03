@@ -8,7 +8,7 @@ McMakler backend test
 3. An additional route `/get-initial-data` is there to run the command to load initial data.
 4. Another route `neo/all` is added to get all the NEOs in DB.
 
-## Instructions
+## Instructionss
 
 1. Clone this repo.
 2. cd to `mcmakler-backend`.
