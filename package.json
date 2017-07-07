@@ -1,7 +1,7 @@
 {
-  "name": "mcmakler-backend",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "McMakler backend test",
+  "description": "backend test",
   "main": "index.js",
   "scripts": {
     "start": "gulp serve",

@@ -1,5 +1,5 @@
-# mcmakler-backend
-McMakler backend test
+# backend
+backend
 
 ## Overview
 
@@ -11,7 +11,7 @@ McMakler backend test
 ## Instructions
 
 1. Clone this repo.
-2. cd to `mcmakler-backend`.
+2. cd to `backend`.
 3. Have mongodb installed and running, port can be set in *./config/config.js*.
 4. Run `npm install` in order to install dependencies.
 5. Run `npm start` to start the dev server.
